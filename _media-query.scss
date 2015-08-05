@@ -1,0 +1,242 @@
+@media all and (max-width: 1000px) {
+	html {
+		font-size: 14px;
+	}
+
+	.main-navbar {
+		max-width: 200px;
+	}
+
+	.badge-container {
+		max-width: 40%;
+		height: calc(100vh - 20%);
+	}
+	.about-content-background .about-content {
+		padding: 35px;
+	}
+
+	.footer-left,
+	.footer-right {
+		padding: 20px;
+	}
+
+	.menu-container {
+		padding: 25px;
+	}
+
+	.contact-us input[type=submit] {
+		margin: 10px auto 15px auto;
+	}
+}
+
+@media all and (max-width: 850px) {
+
+	h2 {
+		font-size: 3rem;
+	}
+
+	.menu {
+		padding: 0 35px;
+	}
+
+	.menu ul li {
+			width: 100%;
+			flex: 1 0 auto;
+			text-align: left;
+			margin: 2px 0;
+			padding: 0;
+	}
+
+	.badge-container {
+		height: calc(100vh - 30%);
+	}
+
+	.contact-us {
+		padding: 15px 20px 0 20px;
+	}
+
+	textarea {
+		height: 50px;
+	}
+
+	.footer-left {
+		padding: 35px 10px;
+	}
+}
+
+@media all and (max-width: 750px) {
+	.sidebar-twitter-widget {
+		display: none;
+	}
+
+	.about h2 {
+		text-align: center;
+	}
+
+	.chef-feature {
+		flex-direction: column;
+	}
+
+	.meal {
+		padding: 25px 10px;
+	}
+
+	.contact-us {
+		position: static;
+		width: 100%;
+	}
+
+	.spacer {
+		display: none;
+	}
+
+	.footer-right,
+	.footer-left {
+		width: 50%;
+	}
+
+
+	.footer-right {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: baseline;
+	}
+
+	.social-buttons {
+		display: flex;
+
+		.fa {
+			padding: 0;
+		}
+	}
+}
+
+@media all and (max-width: 640px) {
+	.about-image {
+		display: none;
+	}
+
+	.chef-feature {
+		text-align: center;
+	}
+
+	.chef-feature {
+		align-items: center;
+	}
+
+	.meal img {
+		width: 6rem;
+	}
+	
+}
+
+@media all and (max-width: 480px) {
+	
+	html {
+		font-size: 12px;
+	}
+
+	header.main {
+		height: 70vh;
+		width: 100%;
+	}
+
+	h1 {
+		margin: 5px;
+	}
+
+	.main-navbar {
+		position: static;
+		display: flex;
+		max-width: 100%;
+		display: block;
+		align-self: stretch;
+		padding: 0;
+
+		.navigation ul {
+			flex-direction: row;
+			height: 80px;
+
+			li {
+				height: 25px;
+
+				a {
+				padding: 5px 5px;
+				}
+
+				&:before {
+					content: none;
+				}
+			}
+		}
+
+		.logo img {
+			width: 50px;
+		}
+	}
+
+	.navigation .main-nav {
+		height: 25px;
+	}
+
+	.badge-container {
+
+	}
+
+	.sidebar-footer {
+		display: none;
+	}
+
+	.about .about-content {
+		padding: 10px 10px;
+	}
+
+
+	.photo-container {
+		position: relative;
+		width: 50%;
+	}
+
+	.services {
+		padding: 0;
+	}
+
+	.meals {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.meal {
+		width: 50%;
+	}
+
+	.menu-container {
+		padding: 10px 0;
+	}
+
+	.button {
+		padding: 10px 25px;
+		height: 50px;
+
+		img {
+			display: none;
+		}
+	}
+
+	.gallery-header ul li a {
+		padding: 0 10px;
+	}
+
+	.map {
+		display: none;
+	}
+
+	.contact-us {
+		padding-top: 25px;
+	}
+
+	.copyright-bar p {
+		padding: 0 0 5px 0;
+	}
+}

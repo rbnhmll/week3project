@@ -1,0 +1,666 @@
+/*Partials*/
+@import "setup";
+@import "variables";
+@import "mixins";
+
+
+
+
+
+/*GENERAL STYLES*/
+
+html{
+	font-size: 16px;
+	font-family: $fontSans;
+}
+
+body {
+	text-align: center;
+}
+
+.wrapper {
+	max-width: 1170px;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+h2 {
+	font-family: $fontFancy;
+	font-size: 4rem;
+	color: $black;
+	font-weight: 200;
+	margin: 25px 0;
+	span {
+		color: $orange;
+	}
+}
+
+h3 {
+	font-family: $fontSerif;
+	font-weight: 300;
+}
+
+h4 {
+	font-family: $fontSans;
+}
+
+h5 {
+	font-family: $fontSerif;
+}
+
+p {
+	font-family: $fontSerif;
+	font-style: italic;
+	
+	span {
+		font-weight: 700;
+	}
+}
+
+a {
+	color: $darkgrey;
+	text-decoration: none;
+	transition: all 0.5s ease;
+
+	&:hover {
+		color: $orange;
+	}
+}
+
+ul {
+	@include list-reset;
+}
+
+.button {
+	@include button($orange);
+	display: flex;
+	align-items: center;
+}
+
+.button img {
+	margin-right: 10px;
+}
+
+
+
+
+/*HEADER STYLE*/
+
+header.main {
+	background: url(assets/food-above.jpeg);
+	background-position: center;
+	background-size:cover;
+	display: flex;
+	height: 100vh;
+}
+
+.badge-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	height: calc(100vh - 15%);
+	width: 50%;
+	justify-content: space-around;
+
+	img {
+		max-width: 100%;
+	}
+}
+
+
+
+
+/*MAIN NAVBAR STYLES*/
+
+.main-navbar {
+	display: flex;
+	flex-direction: column;
+	max-width: 230px;
+	background: $black-opacity;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	box-shadow: 2px 0 10px $black;
+	justify-content: space-between;
+	padding: 15px 35px;
+	
+	.navigation {
+		text-align: left;
+		display: flex;
+
+		
+		ul {
+			margin: 0 auto;
+			align-content: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 200px;
+			
+			li {
+				font-weight: 200;
+
+				&:before{
+					font-family: FontAwesome;
+					content: "\f054";
+					color: $darkgrey;
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+	.sidebar-twitter-widget {
+		border-top: 1px solid $darkgrey;
+		padding-top: 30px;
+		margin-top: 30px;
+		color: $darkgrey;
+
+		.fa {
+			font-size: 2rem;
+			color: $orange;
+		}
+		span {
+			color: $orange;
+		}
+		a {
+			font-size: .8rem;
+			color: $grey;
+		}
+	}
+}
+
+.main {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.sidebar-footer {
+	color: $darkgrey;
+	display: flex;
+	flex-direction: column;
+
+	.social {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 20px;
+		border-top: 1px solid $darkgrey;
+		padding-top: 30px;
+		margin-top: 30px;
+		}
+	
+	p {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+
+
+/*ABOUT STYLES*/
+
+.about {
+	display: flex;
+}
+
+.about-content-background,
+.about-image {
+	flex: 1;
+}
+
+.about-content-background {
+	background:$grey;
+	display: flex;
+	justify-content: flex-end;
+	
+	.about-content {
+		text-align: left;
+		max-width: calc(1170px / 2);
+		padding: 50px 50px 50px 20px;
+
+		img {
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			margin-right: 20px;
+		}
+	}
+}
+
+.about-content p {
+	font-family: $fontSans;
+}
+
+p.second {
+	color: $darkgrey;
+	font-style: normal;
+	font-weight: 200;
+	margin-bottom: 50px;
+}
+
+.chef-feature {
+	display: flex;
+	justify-content: flex-start;
+	
+	h3 {
+		font-size: 2rem;
+		margin: 0;
+	}
+	
+	h4 {
+		color: $orange;
+		margin: 0;
+	}
+}
+
+.chef-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.chevrons .lnr {
+	font-size: 2rem;
+	transition: all 0.5s ease;
+
+	&:hover {
+		color: $orange;
+	}
+}
+
+.about-image {
+	background: url('assets/food-salad.jpg');
+	background-size: cover;
+	
+	img {
+		max-width: 100%;
+	}
+}
+
+
+/*GALLERY STYLES*/
+
+.gallery {
+	background: $black;
+	clear: both;
+}
+
+.gallery-header h2 {
+	margin: 25px 0;
+}
+
+.gallery-header {
+	@include section-padding;
+
+	h2,
+	p {
+		color: $grey;
+		max-width: 75%;
+		margin: 0 auto;
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+	
+	ul {
+		text-align: center;
+		display: inline-block;
+		background: #2a2d32;
+		border: 1px solid #323c3f;
+		padding: 5px;
+		margin-top: 60px;
+		
+		li {
+			float: left;
+			
+			a {
+				padding: 0 20px;
+				border-right: 1px solid #323c3f;
+				color: $grey;
+				font-weight: 200;
+				font-size: .9rem;
+				transition: all 0.5s ease;
+
+				&.veg {
+					border-right: none;
+				}
+			}
+		}
+	}
+}
+
+.gallery li a:hover {
+	color: $orange;
+}
+
+.gallery-content {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.photo-container {
+	position: relative;
+	width: 20%;
+
+	img {
+		display: block;
+		max-width: 100%;
+	}
+}
+
+.photo-overlay {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: $grey;
+	background: $black-opacity;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	transition: all 0.5s ease;
+
+	h5 {
+		font-size: 1.1rem;
+		margin: 0;
+	}
+
+	p {
+		font-size: .8rem;
+	}
+
+	&:hover {
+		opacity: 1;
+
+		.link-container {
+			display: flex;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: white;
+			padding: 2px;
+			max-width: 30%;
+
+				.link1,
+				.link2 {
+					padding: 2px;
+				}
+
+				.link2 {
+					border-left: 1px solid $orange;
+				}
+		}
+	}
+}
+
+
+
+/*SERVICES STYLES*/
+
+.services {
+	color: $darkgrey;
+	padding: 75px 0;
+
+	p {
+		font-family: $fontSans;
+		font-weight: 200;
+		max-width: 75%;
+		margin: 0 auto;
+	}
+}
+
+.meals {
+	display: flex;
+	align-items: baseline;
+}
+
+.meal {
+	padding: 25px;
+	
+	h3 {
+		color: $orange;
+		font-size: 1.6rem;
+		font-weight: 200;
+	}
+}
+
+
+
+
+/*MENU STYLES*/
+
+.menu {
+	background-image: linear-gradient($black-opacity, $black-opacity), url('assets/food-serve.jpg');
+	background-size: cover;
+	color: $grey;
+	padding: 70px 0;
+	
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		
+		li {
+			width: 50%;
+			flex: 1 0 auto;
+			text-align: left;
+		}
+	}
+}
+
+.menu h2 {
+	color: $grey;
+}
+
+.menu-container {
+	display: flex;
+	flex-direction: column;
+
+	a {
+		margin: 0 auto;
+	}
+}
+
+.menu h5 {
+	font-size: 1.3rem;
+	margin: 0;
+	font-weight: 200;
+}
+
+.menu ul {
+	margin-bottom: 100px;
+}
+
+.menu li {
+	padding: 0 20px;
+	margin: 10px 0;
+}
+
+.with-item {
+	font-family: $fontSans;
+	font-size: 0.95rem;
+}
+
+.with-price {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.dots {
+	border-bottom: 2px dotted $grey;
+	flex: 1 0 auto;
+	height: 2rem;
+	margin: 0 10px;
+}
+
+
+
+
+
+/*MAP STYLES*/
+
+
+.map {
+	position: relative;
+}
+
+.map img {
+	max-width: 100%;
+	display: block;
+}
+
+.map .map-marker {
+	position: absolute;
+	top: 2%;
+	left: calc(50% - (39px / 2));
+}
+
+
+
+
+/*FOOTER STYLES*/
+
+.main-footer {
+	background: $black;
+}
+
+.contact {
+	position: relative;
+}
+
+.contact-us {
+	background: white;
+	padding: 25px 30px 0 30px;
+	width: 40%;
+	position: absolute;
+	bottom: 0;
+	left: calc(50% - 20%);
+
+	h2 {
+		padding: 0;
+		margin: 0;
+	}
+
+	input[type=text],
+	input[type=email],
+	textarea {
+		width: 100%;
+		max-width: 100%;
+		margin-bottom: 10px;
+		padding: 10px;
+		background: #fcfcfc;
+		border: 1px solid $grey;
+		position: relative;
+	}
+
+	textarea {
+		max-height: 100px;
+	}
+	
+	input[type=submit] {
+		display: inline-block;
+		padding: 20px 50px;
+		border: 2px solid $black;
+		background: white;
+		text-align: center;
+		margin: 40px auto;
+		transition: all 0.5s ease;
+		text-transform: uppercase;
+		font-weight: 600;
+
+		&:hover {
+			color: $grey;
+			background: $black;
+		}
+	}
+}
+
+.field-container {
+	position: relative;
+
+	.fa {
+		position: absolute;
+		right: 15px;
+		top: 25%;
+	}
+}
+
+.footer-left,
+.spacer,
+.footer-right {
+	float: left;
+	display: inline-block;
+}
+
+.footer-left,
+.footer-right {
+	width: 30%;
+	color: $darkgrey;
+	padding-top: 70px;
+}
+
+.footer-left {
+	padding-right: 70px;
+
+	.social-buttons {
+		width: 100%;
+
+		.fa {
+			font-size: 1.4rem;
+			padding: 50px 8px;
+		}
+	}
+}
+
+.footer-right {
+	padding-left: 70px;
+
+	.contact-content {
+		position: relative;
+		margin: 15px 0;
+
+		p {
+			font-style: normal;
+			font-family: $fontSans;
+			font-size: 0.8rem;
+			margin: 0;
+			padding-left: 45px;
+			text-align: left;
+		}
+	}
+	
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.spacer {
+	width: 40%;
+	height: 310px;
+}
+
+.copyright-bar {
+	clear: both;
+
+	p {
+		padding: 35px 0;
+		color: $darkgrey;
+		font-size: .8rem;
+		margin: 0;
+	}
+}
+
+
+
+
+
+/*MEDIA QUIERIES*/
+
+@import "media-query";

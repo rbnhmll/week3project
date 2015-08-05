@@ -1,0 +1,26 @@
+@mixin button($color) {
+	max-width: 260px;
+	height: 75px;
+	background: transparentize($color, 0.1);
+	padding: 25px 50px;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 5px;
+	transition: all 0.5s ease;
+
+	&:hover {
+		color: white;
+		background: transparentize($color, 0.3);
+	}
+}
+
+@mixin list-reset {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+@mixin section-padding {
+	padding: 50px 0;
+}
